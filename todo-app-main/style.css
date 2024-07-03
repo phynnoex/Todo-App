@@ -1,0 +1,186 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+.background{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+.upper-bg{
+    height: 300px;
+    width: 100%;
+    background-image: url(./images/bg-desktop-light.jpg);
+    background-size: cover;
+}
+.lower-bg{
+    height: 70%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.text-light{
+    color: white;
+}
+
+
+.main{
+    position: absolute;
+    width: 30vw;
+    height: 70vh;
+    background-color: transparent;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+.task-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0px;
+}
+.task-head h1{
+    font-size: 30px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+.input{
+    display: flex;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.inputText{
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 100%;
+    font-size: 17px;
+    border-radius: 5px;
+    font-weight: lighter;
+
+}
+
+
+.tasks{
+    width: 100%;
+}
+.middle{
+    box-shadow: -2px 5px 5px rgb(153, 153, 153);
+    border-radius: 5px;
+}
+.tasked{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px 0px;
+    height: 40px;
+    border-radius: 5px 5px 0px 0px;
+}
+.task-descript{
+    width: 85%;
+}
+.rounded-checkbox {
+    display: none;
+}
+
+/* CSS styles for rounded checkbox */
+.rounded-checkbox {
+    display: none;
+  }
+
+  .rounded-checkbox + .lab {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(138, 138, 138);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    margin: 10px;
+  }
+  .rounded-checkbox + .lab:hover {
+    border-style: solid;
+    border-width: 1px;
+  }
+  #cross-icon{
+    display: none;
+  }
+
+  .rounded-checkbox:checked + .lab {
+    background-image: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+  }
+
+  /* Style for the SVG checkmark */
+  .checkmark-svg {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    width: 10px;
+    height: 10px;
+    fill: #fff; /* Optional: Customize fill color */
+  }
+
+  .rounded-checkbox:checked + label .checkmark-svg {
+    display: block;
+  }
+  .footer{
+    display: flex;
+    background-color: rgb(225, 223, 223);
+    height: 40px;
+    border-radius: 0px 0px 5px 5px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    padding: 0px 10px;
+  }
+  .task-status a{
+   margin: 0px 2px;
+   cursor: pointer;
+   font-weight: 700;
+   color: rgb(156, 156, 156);
+  }
+  .task-status a:hover{
+    color: rgb(0, 0, 0);
+  }
+  /* dark mode */
+.dark-img{
+    background-image: url(./images/bg-desktop-dark.jpg)
+}
+.dark-bg{
+    background-color: hsl(235, 21%, 11%);
+}
+.dark-task{
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(234, 39%, 85%);
+    border: none;
+}
+.rounded-checkbox + .dark-checkbox{
+    background-color: hsl(235, 24%, 19%);
+}
+.dark-task a{
+    margin: 0px 2px;
+    cursor: pointer;
+    font-weight: 700;
+    color: hsl(234, 11%, 52%);
+}
+.dark-task a:hover{
+    color: rgb(255, 255, 255);
+}
+.dark-shadow{
+    box-shadow: -2px 5px 5px hsl(240, 17%, 6%);
+}
