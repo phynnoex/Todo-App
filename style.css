@@ -115,7 +115,7 @@ body{
     border-style: solid;
     border-width: 1px;
   }
-  #cross-icon{
+  .cross-icon{
     display: none;
   }
 

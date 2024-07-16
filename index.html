@@ -27,10 +27,10 @@
           </label>
         </div>
         <input type="text" class="inputText" placeholder="currently typing">
-        </div>
+        <button id="submit">submit</button>
+      </div>
       <div class="middle">
-        
-        <div class="tasks">
+        <div class="tasks" id="taskHouse">
         <div class="tasked " >
           <div>
             <input type="checkbox" id="rounded-checkbox-1" class="rounded-checkbox">
@@ -39,103 +39,27 @@
             </label>
           </div>
           <label for="doneTask" class="task-descript">Jog around the park 3x</label>
-          <a href="blank" id="cross-icon" onclick="event.preventDefault();"><img src="images/icon-cross.svg" alt="" width="70%"></a>
-        
+          <a href="#" id="cross-icon" onclick = "event.preventDefault();"><img src="images/icon-cross.svg" alt="" width="70%"></a>
         </div>
-        </div>
-        <div class="footer">
+      </div>
+      <div class="footer">
         <div>5 items left</div>
         <div class="task-status">
-          <a>All</a>
-          <a>Active</a>
-          <a>Completed</a>
+          <a id="allToggle">All</a>
+          <a id="activeToggle">Active</a>
+          <a id="completedToggle">Completed</a>
         </div>
         <div>
           <a>clear completed</a>
         </div>
       </div>
     </div>
+    <div class="navig">
+      <div id="nav-nums"></div>
+      <button id="next">next</button>
+    </div>
     </div>
   </section>
-  <script>
-      // Enable cancel button when hover on the task-description
-      let tasked = document.querySelector(".tasked");
-      let taskDescript = document.querySelector(".task-descript")
-      let cross = document.querySelector("#cross-icon")
-      tasked.addEventListener('mouseenter', () => {
-        console.log('Hovered over task description');
-        cross.style.display = 'block'
-      });
-
-      // tasked.addEventListener('click', () => {
-      //   tasked.style.backgroundColor = 'transparent';
-      //   console.log('Hovered over task description');
-      //   cross.style.display = 'block'
-      // });
-
-      tasked.addEventListener('mouseleave', () => {
-        console.log('Hovered over task description');
-        cross.style.display = 'none';
-        taskDescript.style.cursor = 'pointer';
-      });
-
-      //dark-mode function
-      function switchmode(isLight) {
-        let upperBg = document.querySelector(".upper-bg");
-        let lowerBg = document.querySelector(".lower-bg");
-        let input = document.querySelector(".input");
-        let InputText = document.querySelector(".inputText");
-        let MidDiv = document.querySelector(".middle");
-        let tasked = document.querySelector(".tasked");
-        let roundedCheckbox = document.querySelectorAll(".lab");
-        let footerTask = document.querySelector(".footer");
-        let taskStatus = document.querySelector(".task-status");
-
-        if (isLight) {
-          upperBg.classList.add('dark-img');
-          lowerBg.classList.add('dark-bg');
-          input.classList.add('dark-task');
-          InputText.classList.add('dark-task');
-          MidDiv.classList.add('dark-shadow');
-          tasked.classList.add('dark-task');
-          roundedCheckbox.forEach(element => {
-            element.classList.add('dark-checkbox')
-          });
-          footerTask.classList.add('dark-task');
-          taskStatus.classList.add('dark-task');
-
-        }else{
-          upperBg.classList.remove('dark-img');
-          lowerBg.classList.remove('dark-bg');
-          input.classList.remove('dark-task');
-          InputText.classList.remove('dark-task');
-          MidDiv.classList.remove('dark-shadow');
-          tasked.classList.remove('dark-task');
-          roundedCheckbox.forEach(element => {
-            element.classList.remove('dark-checkbox')
-          });
-          footerTask.classList.remove('dark-task');
-          taskStatus.classList.remove('dark-task');
-        }
-
-
-      }
-      let modeSetting = document.querySelector(".modeSetting");
-      let isLight = true;
-      modeSetting.innerHTML =`<img src="./images/icon-moon.svg" alt="moon svg">`
-      modeSetting.addEventListener('click',()=>{
-        if (isLight) {
-          modeSetting.innerHTML = `<img src="./images/icon-sun.svg" alt="moon svg">`
-          switchmode(isLight)
-          isLight = false;
-        }else{
-          modeSetting.innerHTML = `<img src="./images/icon-moon.svg" alt="moon svg">`
-          switchmode(isLight)
-          isLight = true;
-        };
-      })
-
-
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

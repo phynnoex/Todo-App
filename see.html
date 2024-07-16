@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Indexes</title>
+</head>
+<body>
+    <div class="checkbox-div">
+        <input type="checkbox" class="checko">
+    </div>
+    <div class="checkbox-div">
+        <input type="checkbox" class="checko">
+    </div>
+    <div class="checkbox-div">
+        <input type="checkbox" class="checko">
+    </div>
+    <div class="checkbox-div">
+        <input type="checkbox" class="checko">
+    </div>
+
+    <script>
+        // Function to get and display checked indexes
+        function displayCheckedIndexes() {
+            // Get all input elements of type checkbox within divs with class 'checkbox-div'
+            const checkboxes = document.querySelectorAll('.checko');
+            const checkedIndexes = [];
+
+            // Loop through the checkboxes and find the checked ones
+            checkboxes.forEach((checkbox, index) => {
+                if (checkbox.checked) {
+                    checkedIndexes.push(index);
+                }
+            });
+
+            if (checkedIndexes.length > 0) {
+                console.log('Checked checkbox indexes:', checkedIndexes);
+            } else {
+                console.log('No checkbox is checked');
+            }
+        }
+
+        // Add change event listener to each checkbox
+        document.querySelectorAll('.checkbox-div input[type="checkbox"]').forEach((checkbox) => {
+            checkbox.addEventListener('change', displayCheckedIndexes);
+        });
+    </script>
+</body>
+</html>
